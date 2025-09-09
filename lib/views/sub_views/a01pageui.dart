@@ -14,10 +14,10 @@ class _A01PageUiState extends State<A01PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         elevation: 0,
+        backgroundColor: Colors.transparent,
         // toolbarHeight: 40,
       ),
       body: Center(
@@ -25,6 +25,7 @@ class _A01PageUiState extends State<A01PageUi> {
           children: [
             Padding(
               padding: const EdgeInsets.only(
+                top: 10,
                 left: 10,
                 right: 10,
               ),
