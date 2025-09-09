@@ -16,24 +16,18 @@ class _HomeUiState extends State<HomeUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple[700],
+      backgroundColor: Color(0xFF390050),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              height: 100,
+              height: 50,
             ),
-            Icon(
-              Icons.flutter_dash,
-              size: 200,
-              color: Colors.white,
+            Image.asset(
+              'assets/images/imgg2.png',
+              width: 300,
             ),
-            // Image(
-            //   image: NetworkImage(
-            //       'https://cdn.pixabay.com/photo/2025/08/11/07/18/nurturing-swan-9767495_1280.jpg'),
-            //   width: 200,
-            // ),
             SizedBox(
               height: 50,
             ),
@@ -51,7 +45,7 @@ class _HomeUiState extends State<HomeUi> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pink[100],
+                backgroundColor: Color(0xFFF89AEE),
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
                 textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 shape: RoundedRectangleBorder(
@@ -76,7 +70,7 @@ class _HomeUiState extends State<HomeUi> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Color(0xFF1F41BB),
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
                 textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 shape: RoundedRectangleBorder(
@@ -102,7 +96,7 @@ class _HomeUiState extends State<HomeUi> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green[500],
+                backgroundColor: Color(0xFF00B140),
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
                 textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 shape: RoundedRectangleBorder(
@@ -122,7 +116,7 @@ class _HomeUiState extends State<HomeUi> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue[300],
+                backgroundColor: Color(0xFF35C2C1),
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
                 textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 shape: RoundedRectangleBorder(
@@ -142,7 +136,7 @@ class _HomeUiState extends State<HomeUi> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange[700],
+                backgroundColor: Color(0xFFF69515),
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
                 textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 shape: RoundedRectangleBorder(
