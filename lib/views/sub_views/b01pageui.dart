@@ -16,6 +16,10 @@ class _B01PageUiState extends State<B01PageUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       body: Center(
         child: Column(
           children: [
@@ -75,7 +79,7 @@ class _B01PageUiState extends State<B01PageUi> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(
+                    Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
                         return B02PageUi();
                       },
@@ -109,7 +113,7 @@ class _B01PageUiState extends State<B01PageUi> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(
+                    Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
                         return B03PageUi();
                       },

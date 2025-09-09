@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/views/sub_views/b01pageui.dart';
+import 'package:flutter_speed_ui_app/views/homeui.dart';
+// import 'package:flutter_speed_ui_app/views/sub_views/b01pageui.dart';
 // import 'package:flutter_speed_ui_app/views/sub_views/b03pageui.dart';
 // import 'package:flutter_speed_ui_app/views/sub_views/b02pageui.dart';
 // import 'package:flutter_speed_ui_app/views/homeui.dart';
@@ -32,7 +33,7 @@ class _FlutterIotSpeedAppState extends State<FlutterIotSpeedApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // ปิดแบนเนอร์ Debug
-      home: B01PageUi(), //เรียกหน้า Home
+      home: HomeUi(), //เรียกหน้า Home
       theme: ThemeData(
         textTheme: GoogleFonts.outfitTextTheme(
           Theme.of(context).textTheme,

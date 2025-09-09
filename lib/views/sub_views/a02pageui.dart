@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_ui_app/views/sub_views/a01pageui.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class A02PageUi extends StatefulWidget {
   const A02PageUi({super.key});
@@ -16,6 +16,10 @@ class _A02PageUiState extends State<A02PageUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(30.0),

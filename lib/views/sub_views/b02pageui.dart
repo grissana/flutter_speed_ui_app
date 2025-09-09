@@ -16,6 +16,10 @@ class _B02PageUiState extends State<B02PageUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       body: Center(
         child: Column(
           children: [
@@ -143,7 +147,7 @@ class _B02PageUiState extends State<B02PageUi> {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(
+                      Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
                           return B03PageUi();
                         },

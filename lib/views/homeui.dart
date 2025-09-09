@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_ui_app/views/sub_views/a01pageui.dart';
+import 'package:flutter_speed_ui_app/views/sub_views/b01pageui.dart';
 
 class HomeUi extends StatefulWidget {
   const HomeUi({super.key});
@@ -62,6 +63,11 @@ class _HomeUiState extends State<HomeUi> {
             ElevatedButton(
               onPressed: () {
                 // Handle button press
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return B01PageUi();
+                  },
+                ));
               },
               child: Text(
                 'Go to B Page',

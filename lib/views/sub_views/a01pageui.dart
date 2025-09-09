@@ -14,11 +14,20 @@ class _A01PageUiState extends State<A01PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        // toolbarHeight: 40,
+      ),
       body: Center(
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(
+                left: 10,
+                right: 10,
+              ),
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(60),
@@ -52,7 +61,7 @@ class _A01PageUiState extends State<A01PageUi> {
                   color: Colors.black),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -63,7 +72,7 @@ class _A01PageUiState extends State<A01PageUi> {
               ),
             ),
             SizedBox(
-              height: 70,
+              height: 40,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +102,7 @@ class _A01PageUiState extends State<A01PageUi> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(
+                    Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
                         return A02PageUi();
                       },
