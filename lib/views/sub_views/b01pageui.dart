@@ -1,19 +1,21 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/views/sub_views/a02pageui.dart';
+import 'package:flutter_speed_ui_app/views/sub_views/b02pageui.dart';
+import 'package:flutter_speed_ui_app/views/sub_views/b03pageui.dart';
 
-class A01PageUi extends StatefulWidget {
-  const A01PageUi({super.key});
+class B01PageUi extends StatefulWidget {
+  const B01PageUi({super.key});
 
   @override
-  State<A01PageUi> createState() => _A01PageUiState();
+  State<B01PageUi> createState() => _B01PageUiState();
 }
 
-class _A01PageUiState extends State<A01PageUi> {
+class _B01PageUiState extends State<B01PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           children: [
@@ -26,30 +28,30 @@ class _A01PageUiState extends State<A01PageUi> {
                 ),
                 child: Container(
                   height: 500,
-                  color: Color(0xFFF89AEE), // เพิ่มสีพื้นหลัง
+                  color: Colors.white, // เพิ่มสีพื้นหลัง
                   child: Image.asset(
-                    'assets/images/Saly.png',
+                    'assets/images/welcome.png',
                     width: 500,
                   ),
                 ),
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            // SizedBox(
+            //   height: 20,
+            // ),
             Text(
               'Discover Your',
               style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                  color: Color(0xFF1F41BB)),
             ),
             Text(
-              'Own Dream House',
+              'Dream Job here',
               style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                  color: Color(0xFF1F41BB)),
             ),
             SizedBox(
               height: 20,
@@ -57,8 +59,11 @@ class _A01PageUiState extends State<A01PageUi> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et. Eget viverra urna, vestibulum egestas faucibus egestas. Sagittis nam velit volutpat eu nunc.',
-                style: TextStyle(fontSize: 14, color: Colors.black),
+                'Explore all the existing job roles based on your interest and study major',
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -69,9 +74,15 @@ class _A01PageUiState extends State<A01PageUi> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context, MaterialPageRoute(
+                      builder: (context) {
+                        return B02PageUi();
+                      },
+                    ));
+                  },
                   child: Text(
-                    'Sign in',
+                    'Login',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -79,7 +90,7 @@ class _A01PageUiState extends State<A01PageUi> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFF89AEE),
+                    backgroundColor: Color(0xFF1F41BB),
                     padding: EdgeInsets.symmetric(horizontal: 70, vertical: 30),
                     textStyle:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -87,15 +98,20 @@ class _A01PageUiState extends State<A01PageUi> {
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         bottomLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
                       ),
                     ),
                   ),
+                ),
+                SizedBox(
+                  width: 10,
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(context, MaterialPageRoute(
                       builder: (context) {
-                        return A02PageUi();
+                        return B03PageUi();
                       },
                     ));
                   },
@@ -108,7 +124,9 @@ class _A01PageUiState extends State<A01PageUi> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[100],
+                    backgroundColor: Colors.white,
+                    elevation: 0,
+                    shadowColor: Colors.transparent,
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
                     textStyle:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -116,6 +134,8 @@ class _A01PageUiState extends State<A01PageUi> {
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
                         bottomRight: Radius.circular(20),
+                        topLeft: Radius.circular(20),
+                        bottomLeft: Radius.circular(20),
                       ),
                     ),
                   ),

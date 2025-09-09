@@ -212,10 +212,9 @@ class _A02PageUiState extends State<A02PageUi> {
                       backgroundColor: Color(0xECE9ECEC),
                       elevation: 0, // << เอาเงาออก
                       highlightElevation: 0, // << กดแล้วก็ไม่ให้มีเงา
-                      child: Icon(
-                        FontAwesomeIcons.google,
-                        color: Colors.red,
-                        size: 40,
+                      child: Image.asset(
+                        'assets/images/Google.png',
+                        width: 40,
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
