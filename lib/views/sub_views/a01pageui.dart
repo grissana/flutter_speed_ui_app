@@ -19,12 +19,13 @@ class A01PageUi extends StatelessWidget {
                   bottomLeft: Radius.circular(60),
                   bottomRight: Radius.circular(60),
                 ),
-                child: Image(
-                  image: NetworkImage(
-                      'https://cdn.pixabay.com/photo/2025/08/11/07/18/nurturing-swan-9767495_1280.jpg'),
-                  width: double.infinity,
+                child: Container(
                   height: 500,
-                  fit: BoxFit.cover,
+                  color: Color(0xFFF89AEE), // เพิ่มสีพื้นหลัง
+                  child: Image.asset(
+                    'assets/images/Saly.png',
+                    width: 500,
+                  ),
                 ),
               ),
             ),
@@ -51,13 +52,13 @@ class A01PageUi extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
-                'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua duis aute irure dolor in reprehenderit in voluptater.',
-                style: TextStyle(fontSize: 16, color: Colors.black),
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et. Eget viverra urna, vestibulum egestas faucibus egestas. Sagittis nam velit volutpat eu nunc.',
+                style: TextStyle(fontSize: 14, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 70,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -66,10 +67,14 @@ class A01PageUi extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'Sign in',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.pink[100],
+                    backgroundColor: Color(0xFFF89AEE),
                     padding: EdgeInsets.symmetric(horizontal: 70, vertical: 30),
                     textStyle:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -91,7 +96,11 @@ class A01PageUi extends StatelessWidget {
                   },
                   child: Text(
                     'Register',
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    ),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.grey[100],

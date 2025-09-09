@@ -28,8 +28,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # assets:
-  # - assets/images/
+  assets:
+    - assets/images/
 
 icons_launcher:
   image_path: "assets/ic_logo_radius.png"

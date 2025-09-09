@@ -28,15 +28,15 @@ class _A02PageUiState extends State<A02PageUi> {
                 'Welcome Back',
                 style: TextStyle(
                     fontSize: 36,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w900,
                     color: Colors.black),
               ),
               SizedBox(
                 height: 5,
               ),
               Text(
-                'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                style: TextStyle(fontSize: 18, color: Colors.black),
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et.',
+                style: TextStyle(fontSize: 16, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -44,22 +44,35 @@ class _A02PageUiState extends State<A02PageUi> {
               ),
               Container(
                 // width: 350,
-                child: TextField(
-                  style: TextStyle(fontSize: 22, color: Colors.black),
-                  decoration: InputDecoration(
-                    labelText: 'Username , Email & Phone Number',
-                    filled: true,
-                    fillColor: Colors.grey[200],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(color: Colors.grey, width: 1),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(color: Colors.blue, width: 2),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      // เงาล่าง
+                      BoxShadow(
+                          color: Color(0x0000001F).withOpacity(0.12),
+                          offset: Offset(0, 3),
+                          blurRadius: 1),
+                    ],
+                  ),
+                  child: TextField(
+                    style: TextStyle(fontSize: 22, color: Colors.black),
+                    decoration: InputDecoration(
+                      labelText: 'Username , Email & Phone Number',
+                      filled: true,
+                      fillColor: Color(0xF3F3F3F3),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.grey, width: 1),
+                        //เพิ่มเงาด้านล่าง
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.blue, width: 2),
+                      ),
                     ),
                   ),
                 ),
@@ -68,13 +81,21 @@ class _A02PageUiState extends State<A02PageUi> {
                 height: 20,
               ),
               Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0x0000001F).withOpacity(0.12),
+                          offset: Offset(0, 3),
+                          blurRadius: 1),
+                    ]),
                 // width: 350,
                 child: TextField(
                   style: TextStyle(fontSize: 22, color: Colors.black),
                   decoration: InputDecoration(
                     labelText: 'Password',
                     filled: true,
-                    fillColor: Colors.grey[200],
+                    fillColor: Color(0xF3F3F3F3),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
@@ -95,8 +116,11 @@ class _A02PageUiState extends State<A02PageUi> {
               Container(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  'Forgot Password ?',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -112,16 +136,22 @@ class _A02PageUiState extends State<A02PageUi> {
                 },
                 child: Text(
                   'Sign in',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.pink[200],
+                  backgroundColor: Color(0xFFF89AEE),
                   minimumSize: Size(double.infinity, 70),
                   textStyle:
                       TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                   ),
+                  elevation: 5, // << เพิ่มเงา (ค่าเยอะ = เงาชัด)
+                  shadowColor:
+                      Color(0x0000001F).withOpacity(0.12), // << กำหนดสีเงา
                 ),
               ),
               SizedBox(
@@ -131,12 +161,12 @@ class _A02PageUiState extends State<A02PageUi> {
                 children: [
                   Expanded(
                     child: Container(
-                      height: 2,
+                      height: 4,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Colors.pink[50]!,
-                            Colors.pink[200]!
+                            Colors.white,
+                            Color(0xFFF89AEE)
                           ], // จากเข้ม → จาง
                         ),
                       ),
@@ -155,12 +185,12 @@ class _A02PageUiState extends State<A02PageUi> {
                   ),
                   Expanded(
                     child: Container(
-                      height: 2,
+                      height: 4,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Colors.pink[200]!,
-                            Colors.pink[50]!
+                            Color(0xFFF89AEE),
+                            Colors.white
                           ], // จาง → เข้ม
                         ),
                       ),
@@ -179,7 +209,9 @@ class _A02PageUiState extends State<A02PageUi> {
                     height: 70,
                     child: FloatingActionButton(
                       onPressed: () {},
-                      backgroundColor: Colors.white,
+                      backgroundColor: Color(0xECE9ECEC),
+                      elevation: 0, // << เอาเงาออก
+                      highlightElevation: 0, // << กดแล้วก็ไม่ให้มีเงา
                       child: Icon(
                         FontAwesomeIcons.google,
                         color: Colors.red,
@@ -187,18 +219,21 @@ class _A02PageUiState extends State<A02PageUi> {
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
+                        side: BorderSide(color: Color(0xFFF89AEE), width: 1),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 30,
                   ),
                   SizedBox(
                     width: 70,
                     height: 70,
                     child: FloatingActionButton(
                       onPressed: () {},
-                      backgroundColor: Colors.white,
+                      backgroundColor: Color(0xECE9ECEC),
+                      elevation: 0, // << เอาเงาออก
+                      highlightElevation: 0, // << กดแล้วก็ไม่ให้มีเงา
                       child: Icon(
                         Icons.facebook,
                         color: Colors.blue,
@@ -206,18 +241,21 @@ class _A02PageUiState extends State<A02PageUi> {
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
+                        side: BorderSide(color: Color(0xFFF89AEE), width: 1),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 30,
                   ),
                   SizedBox(
                     width: 70,
                     height: 70,
                     child: FloatingActionButton(
                       onPressed: () {},
-                      backgroundColor: Colors.white,
+                      backgroundColor: Color(0xECE9ECEC),
+                      elevation: 0, // << เอาเงาออก
+                      highlightElevation: 0, // << กดแล้วก็ไม่ให้มีเงา
                       child: Icon(
                         Icons.apple,
                         color: Colors.black,
@@ -225,6 +263,7 @@ class _A02PageUiState extends State<A02PageUi> {
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
+                        side: BorderSide(color: Color(0xFFF89AEE), width: 1),
                       ),
                     ),
                   ),

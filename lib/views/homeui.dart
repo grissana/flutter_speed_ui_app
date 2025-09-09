@@ -37,11 +37,11 @@ class _HomeUiState extends State<HomeUi> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(
-                  builder: (context) {
-                    return A01PageUi();
-                  },
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => A01PageUi(),
+                    ));
               },
               child: Text(
                 'Go to A Page',
