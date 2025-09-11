@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/sub_views/c02pageui.dart';
 
 class C01PageUi extends StatefulWidget {
   const C01PageUi({super.key});
@@ -18,7 +19,12 @@ class _C01PageUiState extends State<C01PageUi> {
       ),
       body: GestureDetector(
         onTap: () {
-          Navigator.pop(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => C02PageUi(),
+            ),
+          );
         },
         child: Stack(
           children: [
