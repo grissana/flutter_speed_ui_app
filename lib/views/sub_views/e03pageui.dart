@@ -1,6 +1,7 @@
 // ignore_for_file: use_full_hex_values_for_flutter_colors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/sub_views/e02pageui.dart';
 
 class E03PageUi extends StatefulWidget {
   const E03PageUi({super.key});
@@ -329,12 +330,12 @@ class _E03PageUiState extends State<E03PageUi> {
                 ),
                 InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => E03PageUi(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => E02PageUi(),
+                      ),
+                    );
                   },
                   child: Text(
                     'Login',
