@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.flutter_speed_ui_app-mergeDebugResources-2:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\griss\\.gradle\\caches\\8.12\\transforms\\d1928fcfc97c48b7e6272f9cce0561a5\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}
